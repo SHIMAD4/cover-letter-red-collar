@@ -11,6 +11,9 @@
 }
 
 body {
+	min-width: 100vw;
+	min-height: 100vh;
+
 	background-color: var(--main-bg-clr);
 	color: var(--main-text-clr);
 }
@@ -27,4 +30,33 @@ body {
 	display: block;
     max-width: 100%;
     max-height: 100%;
+}
+
+/* ====== Main ====== */
+
+.main {
+	min-height: 100vh;
+
+	display: grid;
+	grid-template-columns: 25% 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas: 
+		" card overview "
+		" card summary ";
+	column-gap: 31px;
+	row-gap: 32px;
+
+	padding: 40px;
+}
+
+.card {
+	grid-area: card;
+}
+
+.overview {
+	grid-area: overview;
+}
+
+.summary {
+	grid-area: summary;
 }
