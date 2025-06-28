@@ -1,5 +1,16 @@
+:root {
+	--main-bg-clr: #000000;
+	--accent-clr: #F51B1B;
+	--main-text-clr: #FFFFFF;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+	background-color: var(--main-bg-clr);
+	color: var(--main-text-clr);
 }
