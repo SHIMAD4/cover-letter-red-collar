@@ -2,7 +2,8 @@
 	/* Colors */
 	--main-bg-clr: #000000;
 	--accent-clr: #F51B1B;
-	--main-text-clr: #FFFFFF;
+	--white-clr: #FFFFFF;
+	--white-clr-op: rgba(255, 255, 255, 0.4);
 
 	/* Typography */
 	--text-h1-ff: "RedCollar", sans-serif;
@@ -73,14 +74,14 @@ body {
 	min-height: 100vh;
 
 	background-color: var(--main-bg-clr);
-	color: var(--main-text-clr);
+	color: var(--white-clr);
 
 	font-family: "TTCommons", sans-serif;
 }
 
 a {
 	text-decoration: none;
-	color: var(--main-text-clr);
+	color: var(--white-clr);
 }
 
 a:hover {
@@ -156,6 +157,7 @@ ul {
 .card_info {
 	width: 100%;
 	height: 100%;
+	max-height: 454px;
 
 	display: flex;
 	justify-content: center;
@@ -252,4 +254,86 @@ ul {
 	.overview_text {
 		max-width: 80%;
 	}
+}
+
+/* ====== Summary section ====== */
+
+.summary {
+	position: relative;
+
+	padding: 48px 28px;
+
+	border: 1px solid var(--white-clr);
+}
+
+.summary_svg-container {
+	position: absolute;
+	top: -1px;
+	left: 56px;
+
+	background-color: var(--main-bg-clr);
+
+	transform: rotate(180deg);
+}
+
+.summary_svg {
+	display: block;
+}
+
+.summary_card {
+	display: flex;
+	gap: 72px;
+
+	padding-top: 20px;
+}
+
+.summary > .summary_card:nth-of-type(2) {
+	padding-top: 0;
+}
+
+.summary_list-container {
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+
+	padding-bottom: 20px;
+
+	border-bottom: 1px solid var(--white-clr-op);
+}
+
+.summary_card:last-of-type .summary_list-container {
+  border-bottom: none;
+}
+
+.summary_list-heading {
+	max-width: 124px;
+	width: 100%;
+
+	font-family: var(--text-h2-ff);
+	font-size: var(--text-h2-fz);
+	font-weight: var(--text-h2-fw);
+	letter-spacing: var(--text-h2-ls);
+	line-height: var(--text-h2-lh);
+}
+
+.summary_list {
+	font-family: var(--text-2-ff);
+	font-size: var(--text-2-fz);
+	font-weight: var(--text-2-fw);
+	letter-spacing: var(--text-2-ls);
+	line-height: var(--text-2-lh);
+}
+
+.summary_list > li:not(:first-child) {
+	color: var(--white-clr-op);
+}
+
+.summary_list-skills {
+	display: flex;
+	align-items: center;
+	column-gap: 32px;
+	row-gap: 16px;
+	flex-wrap: wrap;
 }
