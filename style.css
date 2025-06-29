@@ -259,6 +259,8 @@ ul {
 /* ====== Summary section ====== */
 
 .summary {
+	max-height: fit-content;
+	
 	position: relative;
 
 	padding: 48px 28px;
