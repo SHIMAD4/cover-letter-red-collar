@@ -179,7 +179,8 @@ ul {
 	width: 100%;
 	height: 100%;
 
-	padding: 40px 24px;
+	/* Отступ сверху 38px / 2 + 21 = 40px (Половина высоты notch + остаток) */
+	padding: 21px 24px 40px 24px; 
 
 	background-color: var(--accent-clr);
 	
