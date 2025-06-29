@@ -1,7 +1,65 @@
 :root {
+	/* Colors */
 	--main-bg-clr: #000000;
 	--accent-clr: #F51B1B;
 	--main-text-clr: #FFFFFF;
+
+	/* Typography */
+	--text-h1-ff: "RedCollar", sans-serif;
+	--text-h1-fz: 24px;
+	--text-h1-fw: 400;
+	--text-h1-ls: -2%;
+	--text-h1-lh: 28px;
+	
+	--text-h1-mob-ff: "RedCollar", sans-serif;
+	--text-h1-mob-fz: 20px;
+	--text-h1-mob-fw: 400;
+	--text-h1-mob-ls: -2%;
+	--text-h1-mob-lh: 24px;
+	
+	--text-h2-ff: "RedCollar", sans-serif;
+	--text-h2-fz: 16px;
+	--text-h2-fw: 400;
+	--text-h2-ls: 0%;
+	--text-h2-lh: 100%;
+	
+	--text-main-ff: "TTCommons", sans-serif;
+	--text-main-fz: 20px;
+	--text-main-fw: 400;
+	--text-main-ls: -2%;
+	--text-main-lh: 24px;
+
+	--text-main-mob-ff: "TTCommons", sans-serif;
+	--text-main-mob-fz: 16px;
+	--text-main-mob-fw: 400;
+	--text-main-mob-ls: -2%;
+	--text-main-mob-lh: 20px;
+	
+	--text-2-ff: "TTCommons", sans-serif;
+	--text-2-fz: 18px;
+	--text-2-fw: 400;
+	--text-2-ls: -1%;
+	--text-2-lh: 24px;
+	
+	--text-2-mob-ff: "TTCommons", sans-serif;
+	--text-2-mob-fz: 16px;
+	--text-2-mob-fw: 400;
+	--text-2-mob-ls: -1%;
+	--text-2-mob-lh: 20px;
+}
+
+@font-face {
+	font-family: "RedCollar";
+	src: url(./assets/fonts/Redcollar.woff2) format("woff2");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "TTCommons";
+	src: url(./assets/fonts/TTCommons-Regular.woff2) format("woff2");
+	font-style: normal;
+	font-weight: normal;
 }
 
 * {
@@ -16,6 +74,8 @@ body {
 
 	background-color: var(--main-bg-clr);
 	color: var(--main-text-clr);
+
+	font-family: "TTCommons", sans-serif;
 }
 
 a {
@@ -107,8 +167,10 @@ ul {
 	position: absolute;
 	top: -30px;
 	left: 0;
+
 	width: 322px;
 	height: 38px;
+
 	background-color: var(--accent-clr);
 	clip-path: path("M 0,36 Q 0,20 16,20 l 113, 0 q 32,0 32,-19 q 0,19 32,19 l 113, 0 q 16,0 16,16 Z ");
 }
@@ -133,6 +195,22 @@ ul {
 	margin-bottom: 40px;
 }
 
+.card_text > h1 {
+	font-family: var(--text-h1-ff);
+	font-size: var(--text-h1-fz);
+	font-weight: var(--text-h1-fw);
+	letter-spacing: var(--text-h1-ls);
+	line-height: var(--text-h1-lh);
+}
+
+.card_text > p {
+	font-family: var(--text-main-ff);
+	font-size: var(--text-main-fz);
+	font-weight: var(--text-main-fw);
+	letter-spacing: var(--text-main-ls);
+	line-height: var(--text-main-lh);
+}
+
 .card_list {
 	display: flex;
 	flex-direction: column;
@@ -145,4 +223,12 @@ ul {
 	justify-content: center;
 	align-items: center;
 	gap: 11px;
+}
+
+.card_list > li > span {
+	font-family: var(--text-main-ff);
+	font-size: var(--text-main-fz);
+	font-weight: var(--text-main-fw);
+	letter-spacing: var(--text-main-ls);
+	line-height: var(--text-main-lh);
 }
