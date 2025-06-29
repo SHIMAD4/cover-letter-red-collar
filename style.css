@@ -18,8 +18,20 @@ body {
 	color: var(--main-text-clr);
 }
 
-/* ====== Header ====== */
+a {
+	text-decoration: none;
+	color: var(--main-text-clr);
+}
 
+a:hover {
+	text-decoration: underline;
+}
+
+ul {
+	list-style-type: none;
+}
+
+/* ====== Header ====== */
 .header {
 	position: absolute;
 	top: 26px;
@@ -33,12 +45,11 @@ body {
 }
 
 /* ====== Main ====== */
-
 .main {
 	min-height: 100vh;
 
 	display: grid;
-	grid-template-columns: 25% 1fr;
+	grid-template-columns: 322px 1fr;
 	grid-template-rows: auto 1fr;
 	grid-template-areas: 
 		" card overview "
@@ -59,4 +70,79 @@ body {
 
 .summary {
 	grid-area: summary;
+}
+
+/* ====== Card section ====== */
+.card {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.card_avatar {
+	width: 322px;
+	max-height: 355px;
+
+	overflow: hidden;
+}
+
+.card_avatar-image {
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+}
+
+.card_info {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.card_notch {
+	position: absolute;
+	top: -30px;
+	left: 0;
+	width: 322px;
+	height: 38px;
+	background-color: var(--accent-clr);
+	clip-path: path("M 0,36 Q 0,20 16,20 l 113, 0 q 32,0 32,-19 q 0,19 32,19 l 113, 0 q 16,0 16,16 Z ");
+}
+
+.card_text {
+	width: 100%;
+	height: 100%;
+
+	padding: 40px 24px;
+
+	background-color: var(--accent-clr);
+	
+	position: relative;
+}
+
+.card_text > h1,
+.card_text > p {
+	margin-bottom: 8px;
+}
+
+.card_text > p:last-of-type {
+	margin-bottom: 40px;
+}
+
+.card_list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+}
+
+.card_list > li > a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 11px;
 }
