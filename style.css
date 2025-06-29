@@ -233,3 +233,23 @@ ul {
 	letter-spacing: var(--text-main-ls);
 	line-height: var(--text-main-lh);
 }
+
+/* ====== Overview section ====== */
+
+.overview_text {
+	max-width: 75%;
+
+	margin-top: 18px;
+
+	font-family: var(--text-2-ff);
+	font-size: var(--text-2-fz);
+	font-weight: var(--text-2-fw);
+	letter-spacing: var(--text-2-ls);
+	line-height: var(--text-2-lh);
+}
+
+@media screen and (min-width: 1441px) {
+	.overview_text {
+		max-width: 80%;
+	}
+}
