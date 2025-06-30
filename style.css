@@ -8,9 +8,6 @@
 }
 
 body {
-	min-width: 100vw;
-	min-height: 100vh;
-
 	background-color: var(--main-bg-clr);
 	color: var(--white-clr);
 
@@ -32,6 +29,8 @@ ul {
 
 /* ====== Header ====== */
 .header {
+	width: fit-content;
+	
 	position: absolute;
 	top: 26px;
 	right: 41px;
@@ -93,7 +92,7 @@ ul {
 }
 
 .card_info {
-	width: 100%;
+	width: 322px;
 	height: 100%;
 	max-height: 454px;
 
@@ -119,8 +118,8 @@ ul {
 	width: 100%;
 	height: 100%;
 
-	/* Отступ сверху 38px / 2 + 21 = 40px (Половина высоты notch + остаток) */
-	padding: 21px 24px 40px 24px; 
+	/* Отступ сверху 38px / 2 + (21 + 8) = 40px (Половина высоты notch + (остаток + 8 отступ notch)) */
+	padding: 29px 24px 40px 24px; 
 
 	background-color: var(--accent-clr);
 	
@@ -188,7 +187,7 @@ ul {
 	line-height: var(--text-2-lh);
 }
 
-@media screen and (min-width: 1441px) {
+@media (min-width: 1441px) {
 	.overview_text {
 		max-width: 80%;
 	}

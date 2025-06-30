@@ -1,0 +1,119 @@
+@media (max-width: 768px) {
+	/* ====== Header ====== */
+	.header {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		right: 0px;
+	}
+
+	/* ====== Main ====== */
+	.main {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			" card "
+			" overview "
+			" summary ";
+		column-gap: 0px;
+		row-gap: 24px;
+
+		padding: 90px 20px 58px 20px;
+	}
+
+	/* ====== Card section ====== */
+    .card_info {
+        height: fit-content;
+    }
+
+    .card_text {
+        height: fit-content;
+        padding: 13px 24px 40px 24px; 
+    }
+
+    .card_text > h1,
+    .card_text > p {
+        margin-bottom: 4px;
+    }
+
+	.card_text > h1 {
+		font-family: var(--text-h1-mob-ff);
+		font-size: var(--text-h1-mob-fz);
+		font-weight: var(--text-h1-mob-fw);
+		letter-spacing: var(--text-h1-mob-ls);
+		line-height: var(--text-h1-mob-lh);
+	}
+
+	.card_text > p {
+		font-family: var(--text-main-mob-ff);
+		font-size: var(--text-main-mob-fz);
+		font-weight: var(--text-main-mob-fw);
+		letter-spacing: var(--text-main-mob-ls);
+		line-height: var(--text-main-mob-lh);
+	}
+
+	.card_text > p:last-of-type {
+        margin-bottom: 32px;
+    }
+
+    .card_list {
+        gap: 16px;
+    }
+
+    .card_list > li > a {
+        gap: 16px;
+    }
+	
+	.card_list > li > span {
+		font-family: var(--text-main-mob-ff);
+		font-size: var(--text-main-mob-fz);
+		font-weight: var(--text-main-mob-fw);
+		letter-spacing: var(--text-main-mob-ls);
+		line-height: var(--text-main-mob-lh);
+	}
+
+	/* ====== Overview section ====== */
+	.overview {
+		display: flex;
+		justify-content: center;
+        align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.overview_text {
+		margin-top: 16px; /* row-gap + margin-top = 40px */
+        max-width: 100%;
+
+		font-family: var(--text-2-mob-ff);
+		font-size: var(--text-2-mob-fz);
+		font-weight: var(--text-2-mob-fw);
+		letter-spacing: var(--text-2-mob-ls);
+		line-height: var(--text-2-mob-lh);
+	}
+
+	/* ====== Summary section ====== */
+	.summary {
+		padding: 40px 15px 30px 15px;
+	}
+
+	.summary_card {
+		flex-direction: column;
+		gap: 16px;
+	}
+
+    .summary_card:last-of-type .summary_list-container {
+        padding-bottom: 0;
+    }
+
+	.summary_list {
+		font-family: var(--text-2-mob-ff);
+		font-size: var(--text-2-mob-fz);
+		font-weight: var(--text-2-mob-fw);
+		letter-spacing: var(--text-2-mob-ls);
+		line-height: var(--text-2-mob-lh);
+	}
+
+	.summary_list-skills {
+		column-gap: 16px;
+		row-gap: 8px;
+	}
+}
