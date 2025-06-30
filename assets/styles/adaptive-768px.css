@@ -21,12 +21,6 @@
 	}
 
 	/* ====== Card section ====== */
-	/* .card_avatar-RCvibe {
-		top: 140px;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	} */
-
     .card_info {
         height: fit-content;
     }
@@ -99,6 +93,11 @@
 	/* ====== Summary section ====== */
 	.summary {
 		padding: 40px 15px 30px 15px;
+	}
+
+	.summary_svg-container {
+		left: 50%;
+		transform: rotate(180deg) translateX(55%);
 	}
 
 	.summary_card {
